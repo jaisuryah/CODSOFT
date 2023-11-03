@@ -36,8 +36,3 @@ Mark as Complete: Mark tasks as completed when you finish them.
 Remove Tasks: Remove tasks from the list.
 
 Quit: Exit the application when you're done managing your tasks.
-
-Task 5: Image Processing Tool
-Description:
-
-Build a tool that allows users to perform various image processing operations like resizing, cropping, and applying basic filters (e.g., grayscale, blur, sharpen) to images. Implement a user-friendly console-based interface for easy interaction. This task combines file handling and algorithmic skills.
