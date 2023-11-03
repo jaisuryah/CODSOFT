@@ -9,7 +9,6 @@ using namespace std;
 int main()
 {
 
-
     random_device rd;
     mt19937 mt(rd());
 
@@ -18,12 +17,12 @@ int main()
     cout<<"-------------------- WELCOME TO NUMBER GUESSING GAME --------------------"<<endl;
     cout<<"-------------------------------------------------------------------------"<<endl;
 
-    int min_num=0;
+    int min_num=1;
     int max_num;
-    cout<<"Enter a number range :"<<endl;
+    cout<<"Enter a number range : ";
     cin>>max_num;
 
-    cout<<"I'm thinking of a number between "<<min_num<<" and "<<max_num<<" . Try to guess it. \n";
+    cout<<endl<<endl<<"I'm thinking of a number between "<<min_num<<" and "<<max_num<<" "<<"Try to guess it. \n";
 
     uniform_int_distribution<int> distribution(min_num, max_num);
     int secret_num=distribution(mt);
@@ -57,6 +56,20 @@ int main()
         cin>>guessed_num;
 
     }
-
+    int flag=1;
     cout<<"Congratulations! You guessed the number "<<secret_num<<" in "<<attempt<<" attempts! \n";
+    
+    if(flag==1)
+    {
+            cout<<endl<<"Try Again ? - 1"<<endl<<"Quit - 0"<<endl<<endl<<"ENTER YOUR CHOICE : ";
+            int replay;
+            cin>>replay;
+            switch(replay)
+            {
+                case 1 : main(); break;
+        
+                case 0 : cout<<"\n\nGoodBye Lets see you Later"; break;
+        
+            }
+    }
 }
